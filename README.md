@@ -1,6 +1,22 @@
-# homebrew
+# Homebrew
 
-A new Flutter project.
+Use the Figma Assignment to help you build the User Interface of Homebrew.
+
+# Homebrew Class Unit Test
+
+To run your unit tests use the following command.
+
+```console
+flutter test test/coffee_tools_test.dart
+```
+
+# Homebrew Integration Tests
+
+Use the following command to run your integration tests.
+
+```console
+flutter drive --target=test_driver/app.dart
+```
 
 ## Getting Started
 
