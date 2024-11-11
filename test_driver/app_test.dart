@@ -26,7 +26,7 @@ void main() {
       Then I should see "63g - course ground coffee"
       And I should see "887g - water"
     */
-    test("should give recommendation for French Press", () {
+    test("should give recommendation for French Press", () async {
       // your code here
     });
 
@@ -39,7 +39,7 @@ void main() {
       Then I should see "52g - medium ground coffee"
       And I should see "887g - water"
     */
-    test("should give recommendation for Drip Machine", () {
+    test("should give recommendation for Drip Machine", () async {
       //your code here
     });
   });
@@ -51,7 +51,7 @@ void main() {
       Then I expect to still be on the Coffee Device Selection Screen
     */
     test("should not advance from Choose Device Screen without a selection",
-        () {
+        () async {
       //your code here
     });
 
@@ -61,7 +61,7 @@ void main() {
       When I press "Continue"
       Then I expect to still be on the Choose Cups Screen
     */
-    test("should not advance from Choose Cups Screen without cups", () {
+    test("should not advance from Choose Cups Screen without cups", () async {
       //your code here
     });
 
@@ -73,7 +73,7 @@ void main() {
       Then I expect to still be on the Choose Cups Screen
     */
     test("should not advance from Choose Cups Screen with negative cup amount",
-        () {
+        () async {
       //your code here
     });
 
@@ -86,7 +86,7 @@ void main() {
     */
     test(
         "should not advance from Choose Cups Screen with letter for cup amount",
-        () {
+        () async {
       //your code here
       //if you can restrict the keyboard to numbers only you can delete this test
     });
@@ -97,7 +97,7 @@ void main() {
       When I press "Continue"
       Then I expect to still be on the Choose Cups Screen
     */
-    test("should not advance from Choose Cups Screen without cups", () {
+    test("should not advance from Choose Cups Screen without cups", () async {
       //your code here
     });
 
@@ -109,7 +109,7 @@ void main() {
       Then I expect to still be on the Choose Cups Screen
     */
     test("should not advance from Choose Cups Screen with negative cup amount",
-        () {
+        () async {
       //your code here
     });
 
@@ -122,7 +122,7 @@ void main() {
     */
     test(
         "should not advance from Choose Cups Screen with letter for cup amount",
-        () {
+        () async {
       //your code here
       //if you can restrict the keyboard to numbers only you can delete this test
     });
