@@ -1,8 +1,23 @@
 # Homebrew
 
-Use the Figma Assignment to help you build the User Interface of Homebrew.
+For this project assume you are a professional Mobile Software Developer who has been hired by Homebrew LLC, a company that focuses on selling coffee machines and accessories. You have been tasked with developing a mobile app that gives users the pefect coffee-to-water ratio based on their coffee machine.
 
-# Homebrew Class Unit Test
+To complete this project you must use Continuous Integration (CI), one of the two components of DevOps.
+
+To get started with CI make sure you do the following:
+
+**Configuration-as-Code** 
+- Create your YAML file and PR template.
+- Setup GitHub Actions.
+- Create a Branch Protection Rule.
+
+## App Specifications
+
+The specifications for building the Homebrew app can be found in the PowerPoint in Blackboard.
+
+**REMEMBER:** Use Behaviour-Driven Development by following the user stories and Test-Driven Development by writing your Unit and Integration tests first. Also, don't forget to break up your tasks into sprints and make a PR for each sprint.
+
+## Homebrew Class Unit Test
 
 To run your unit tests use the following command.
 
@@ -10,23 +25,10 @@ To run your unit tests use the following command.
 flutter test test/coffee_tools_test.dart
 ```
 
-# Homebrew Integration Tests
+## Homebrew Integration Tests
 
 Use the following command to run your integration tests.
 
 ```console
-flutter drive --target=test_driver/app.dart
+flutter test test/homebrew_test.dart
 ```
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

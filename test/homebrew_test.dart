@@ -1,21 +1,11 @@
-// Imports the Flutter Driver API.
-import 'package:flutter_driver/flutter_driver.dart';
-import 'package:test/test.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:integration_test/integration_test.dart';
+import 'package:homebrew/main.dart';
 
 void main() {
-  late FlutterDriver driver;
+  IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
-  // Connect to the Flutter driver before running any tests.
-  setUpAll(() async {
-    driver = await FlutterDriver.connect();
-  });
-
-  // Close the connection to the driver after the tests have completed.
-  tearDownAll(() async {
-    if (driver != null) {
-      driver.close();
-    }
-  });
   group('Happy Paths', () {
     /*
       Given I am on the Coffee Device Selection Screen
@@ -26,8 +16,10 @@ void main() {
       Then I should see "63g - course ground coffee"
       And I should see "887g - water"
     */
-    test("should give recommendation for French Press", () async {
+    testWidgets("should give recommendation for French Press",
+        (WidgetTester tester) async {
       // your code here
+      await tester.pumpWidget(MyApp());
     });
 
     /*
@@ -39,7 +31,8 @@ void main() {
       Then I should see "52g - medium ground coffee"
       And I should see "887g - water"
     */
-    test("should give recommendation for Drip Machine", () async {
+    testWidgets("should give recommendation for Drip Machine",
+        (WidgetTester tester) async {
       //your code here
     });
   });
@@ -50,8 +43,9 @@ void main() {
       When I press "Continue"
       Then I expect to still be on the Coffee Device Selection Screen
     */
-    test("should not advance from Choose Device Screen without a selection",
-        () async {
+    testWidgets(
+        "should not advance from Choose Device Screen without a selection",
+        (WidgetTester tester) async {
       //your code here
     });
 
@@ -61,7 +55,8 @@ void main() {
       When I press "Continue"
       Then I expect to still be on the Choose Cups Screen
     */
-    test("should not advance from Choose Cups Screen without cups", () async {
+    testWidgets("should not advance from Choose Cups Screen without cups",
+        (WidgetTester tester) async {
       //your code here
     });
 
@@ -72,8 +67,9 @@ void main() {
       And I press "Continue"
       Then I expect to still be on the Choose Cups Screen
     */
-    test("should not advance from Choose Cups Screen with negative cup amount",
-        () async {
+    testWidgets(
+        "should not advance from Choose Cups Screen with negative cup amount",
+        (WidgetTester tester) async {
       //your code here
     });
 
@@ -84,9 +80,9 @@ void main() {
       And I press "Continue"
       Then I expect to still be on the Choose Cups Screen
     */
-    test(
+    testWidgets(
         "should not advance from Choose Cups Screen with letter for cup amount",
-        () async {
+        (WidgetTester tester) async {
       //your code here
       //if you can restrict the keyboard to numbers only you can delete this test
     });
@@ -97,7 +93,8 @@ void main() {
       When I press "Continue"
       Then I expect to still be on the Choose Cups Screen
     */
-    test("should not advance from Choose Cups Screen without cups", () async {
+    testWidgets("should not advance from Choose Cups Screen without cups",
+        (WidgetTester tester) async {
       //your code here
     });
 
@@ -108,8 +105,9 @@ void main() {
       And I press "Continue"
       Then I expect to still be on the Choose Cups Screen
     */
-    test("should not advance from Choose Cups Screen with negative cup amount",
-        () async {
+    testWidgets(
+        "should not advance from Choose Cups Screen with negative cup amount",
+        (WidgetTester tester) async {
       //your code here
     });
 
@@ -120,9 +118,9 @@ void main() {
       And I press "Continue"
       Then I expect to still be on the Choose Cups Screen
     */
-    test(
+    testWidgets(
         "should not advance from Choose Cups Screen with letter for cup amount",
-        () async {
+        (WidgetTester tester) async {
       //your code here
       //if you can restrict the keyboard to numbers only you can delete this test
     });
