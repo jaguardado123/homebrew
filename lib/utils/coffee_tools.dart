@@ -1,10 +1,19 @@
 class CoffeeTools {
-  // Input: number of cups (positive integer)
-  // Output: number of ounces in a cup
-  static int cupsToOunces(int cups) {
-    if (cups <= 0) {
+  
+  // Input: number of ounces (positive integer)
+  // Output: number of grams
+  static int ouncesToGrams(int oz) {
+    if (oz <= 0) {
       throw ArgumentError();
     }
-    return cups * 6;
+
+    return 0;
   }
+
+  // French Press Ratio
+
+
+  // Drip Machine Ratio
+
+
 }

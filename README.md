@@ -1,15 +1,15 @@
 # Homebrew Project
 
-The purpose of this project is to practice Pair-Programming and utilizing Behaviour-Driven Development (BDD), Test-Driven Development (TDD) and Continuous Integration (CI).
+The purpose of this project is to practice Pair-Programming and utilize Behavior-Driven Design (BDD), Test-Driven Development (TDD) and Continuous Integration (CI).
 
 ### Before You Start
 
-Before you start writing any code, remember you will be graded based on your development process and **NOT** the finished outcome. Make sure to read through this README to have a good understanding of how to complete this project. To avoid losing any points, make sure you follow the rules below.
+Before you start writing any code, remember you will be graded based on your development process and **NOT** just the finished outcome. Make sure to read through this README to have a good understanding of how to complete this project. To avoid losing any points, make sure you follow the rules below.
 
 **Rules:**
 
 - Do **NOT** commit & push directly into the master/main branch.
-- Do **NOT** merge broken code into the master/main branch. (*You can still commit & push to your other branches*)
+- Do **NOT** merge failed tests into the master/main branch. (*You can still commit & push to your other branches*)
 - Do **NOT** merge into the master/main branch without a pull request.
 - Do **NOT** merge into the master/main branch without filling out your `pull_request_template.md` file.
 
@@ -17,22 +17,26 @@ Before you start writing any code, remember you will be graded based on your dev
 
 ## Design & Planning (Validation)
 
-This phase utilizes <span style="color: #0096FF">**Behaviour-Driven Development (BDD)**</span> to determine the application's behaviour and fucntionality from the customer's request. For this phase you do not need to add any material, simply read through it to understand the behaviour of this application.
+This phase utilizes <span style="color: #0096FF">**Behavior-Driven Design (BDD)**</span> to determine the application's behavior and fucntionality from the customer's request. For this phase you do not need to add any material, simply read through it to understand the behavior of this application.
 
 **Customer Request:**
 
-*"I would like an application for coffee aficionados that tells them how to prepare the best French Press or Drip Machine coffee possible. Through the app the users can choose which type of coffee machine they have and then input how much water will use. A French Press machine should have a 1/14 coffee-to-water ratio and Drip Machine a 1/17 coffee-to-water ratio. The result should be shown to them in grams."*
+*"I would like an application for coffee aficionados that tells them how to prepare the best French Press or Drip Machine coffee possible. Through the app the users can choose which type of coffee machine they have and then input how much water will use. A French Press machine should have a 1/14 coffee-to-water ratio and Drip Machine a 1/17 coffee-to-water ratio. The result should be shown to them in ounces and grams."*
 
 Upon hearing their request you draft the following user stories.
 
 ### User Stories
 
-- As a coffee-user, I should be able to choose the type of coffee device I have, so that I know the correct coffee-to-water ration for that specific device.
-- As a coffee-user, I should be able to input how much water in ounces I intend to use, so that I know how many grams of coffee I need for my device.
-- As a coffee-user, I should see my recommended coffee-to-water ratio, so that I can begin preparing my coffee.
-- As a coffee-user, I should be able to restart the process, so that I can input a select a new device or input a different water amount.
+- As a coffee-drinker, I should be able to choose between a French Press or Drip Machine coffee device, so that I know the correct coffee-to-water ratio for that specific device.
 
-Using the above user stories, you draft multiple validation sketches and finally the customer agrees to the sketch below.
+- As a coffee-drinker, I should be able to input how many ounces of water I intend to use, so that I know how many grams of coffee I need for my device.
+
+- As a coffee-drinker, I should see my recommended coffee-to-water ratio in grams and ounces, so that I can begin preparing my coffee.
+
+- As a coffee-drinker, I should be able to restart the process, so that I can select a new device or input a different water amount.
+
+
+Using the above user stories you draft multiple validation sketches and finally the customer agrees to the sketch below.
 
 ### Validation Sketch
 
@@ -62,17 +66,26 @@ From the prototypes in the validation phase above you create the following **Acc
 
 **Happy Paths:**
 
-- **GIVEN** I am on the Coffee Device Selection Screen, **WHEN** I tap "French Press" **AND** I tap "Continue" **AND** I enter "5" **AND** I tap "Continue", **THEN** I should see "63g - course ground coffee" **AND** I should see "887g - water".
+- **GIVEN** I am on the Coffee Device Selection Screen, **WHEN** I tap "French Press" **AND** I tap "Continue" **AND** I input "16" **AND** I tap "Continue", **THEN** I should see "32.4 g - medium ground coffee" **AND** I should see "16 oz - water".
 
-- **GIVEN** I am on the Coffee Device Selection Screen, **WHEN** I tap "Drip Machine" **AND** I tap "Continue" **AND** I enter "5" **AND** I tap "Continue", **THEN** I should see "52g - medium ground coffee" **AND** I should see "887g - water"
+
+- **GIVEN** I am on the Coffee Device Selection Screen, **WHEN** I tap "Drip Machine" **AND** I tap "Continue" **AND** I input "16" **AND** I tap "Continue", **THEN** I should see "26.7 g - medium ground coffee" **AND** I should see "16 oz - water"
+
+- **GIVEN** I have already selected a coffee device and input a # of oz **AND** I am on the Recommendation Screen, **WHEN** I tap "Done", **THEN** I should be taken back to the Coffee Device Selection Screen.
+
+</div>
+
 
 **Sad Paths:**
 
-- You will have to create your sad paths.
+- ADD YOUR SAD PATHS HERE.
+
+
+
+
+<br><br>
 
 ### Unit Tests
-
-After creating your acceptance criteria, you decide to write your unit tests. **Unit tests** are tests that test individual functions rather than user interaction. You also decide to place all your brewing calculation functions inside a single dart file rather than having many functions spread throughout multiple dart files.
 
 Write all your brew calculation functions inside the `CoffeeTools` class located in the `lib/utils/coffee_tools.dart` file.
 
@@ -112,11 +125,9 @@ flutter test test/integration_tests.dart
 
 ## Code Implementation
 
-Now its time for you to start writing code!
-
 Use <span style="color: #0096FF">**Continuous Integration (CI)**</span> when updating your GitHub repository. CI is one of the 2 phases of **DevOps** and it focuses on updating your source code in a way that almost 100% prevents Regression.
 
-<img src="screenshots/devops.PNG" width="350px">
+<img src="screenshots/devops.png" width="350px">
 
 The first step of CI is to setup your **Configuration-as-Code (CaC)**, this step is where you configure your code repository to enforce the CI pipeline.
 
@@ -135,8 +146,7 @@ This has **NOT** ben setup for you.
 You can create a new branch and update your GitHub repo all from your terminal. Simply create a new branch, the swith over to it, and lastly push to GitHub. You can use the commands below.
 
 ```console
-git branch new_branch
-git checkout new_branch
+git checkout -b new_branch
 git push -u origin new_branch
 ```
 
