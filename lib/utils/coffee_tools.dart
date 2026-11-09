@@ -2,7 +2,7 @@ class CoffeeTools {
   
   // Input: number of ounces (positive integer)
   // Output: number of grams
-  static int ouncesToGrams(int oz) {
+  static double ouncesToGrams(dynamic oz) {
     if (oz <= 0) {
       throw ArgumentError();
     }

@@ -8,10 +8,10 @@ Before you start writing any code, remember you will be graded based on your dev
 
 **Rules:**
 
-- Do **NOT** commit & push directly into the master/main branch.
-- Do **NOT** merge failed tests into the master/main branch. (*You can still commit & push to your other branches*)
-- Do **NOT** merge into the master/main branch without a pull request.
-- Do **NOT** merge into the master/main branch without filling out your `pull_request_template.md` file.
+- Do **NOT** commit & push directly into the `master` / `main` branch.
+- Do **NOT** merge broken code nor failing tests into the `master` / `main` branch. (*You can still commit & push to your other branches*)
+- Do **NOT** merge into the `master` / `main` branch without a *Pull Request*.
+- Do **NOT** merge into the `master` / `main` branch without a *Code Review*.
 
 <br>
 
@@ -21,7 +21,9 @@ This phase utilizes <span style="color: #0096FF">**Behavior-Driven Design (BDD)*
 
 **Customer Request:**
 
-*"I would like an application for coffee aficionados that tells them how to prepare the best French Press or Drip Machine coffee possible. Through the app the users can choose which type of coffee machine they have and then input how much water will use. A French Press machine should have a 1/14 coffee-to-water ratio and Drip Machine a 1/17 coffee-to-water ratio. The result should be shown to them in ounces and grams."*
+```
+"I would like an application for coffee aficionados that tells them how to prepare the best French Press or Drip Machine coffee possible. Through the app the users can choose which type of coffee machine they have and then input how much water will use. A French Press machine should have a 1/14 coffee-to-water ratio and Drip Machine a 1/17 coffee-to-water ratio. The result should be shown to them in ounces and grams."
+```
 
 Upon hearing their request you draft the following user stories.
 
@@ -99,8 +101,8 @@ flutter test test/unit_tests.dart
 
 **In VS Code:**
 
-1. Open the test/unit_tests.dart file
-2. While in the test/unit_tests.dart file
+1. Open the `test/unit_tests.dart` file
+2. While in the `test/unit_tests.dart` file
 3. Select the Debug menu
 4. Click the Run Without Debuging option
 
@@ -116,8 +118,8 @@ flutter test test/integration_tests.dart
 
 **In VS Code:**
 
-1. Open the test/integration_tests.dart file
-2. While in the test/integration_tests.dart file
+1. Open the `test/integration_tests.dart` file
+2. While in the `test/integration_tests.dart` file
 3. Select the Debug menu
 4. Click the Run Without Debuging option
 
