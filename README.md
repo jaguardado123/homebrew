@@ -21,9 +21,7 @@ This phase utilizes <span style="color: #0096FF">**Behavior-Driven Design (BDD)*
 
 **Customer Request:**
 
-```
-"I would like an application for coffee aficionados that tells them how to prepare the best French Press or Drip Machine coffee possible. Through the app the users can choose which type of coffee machine they have and then input how much water will use. A French Press machine should have a 1/14 coffee-to-water ratio and Drip Machine a 1/17 coffee-to-water ratio. The result should be shown to them in ounces and grams."
-```
+`"I would like an application for coffee aficionados that tells them how to prepare the best French Press or Drip Machine coffee possible. Through the app the users can choose which type of coffee machine they have and then input how much water will use. A French Press machine should have a 1/14 coffee-to-water ratio and Drip Machine a 1/17 coffee-to-water ratio. The result should be shown to them in ounces and grams."`
 
 Upon hearing their request you draft the following user stories.
 
